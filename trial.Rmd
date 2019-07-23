@@ -1,0 +1,15 @@
+SPY & QQQ
+========================================================
+```{r echo=TRUE, results='hide', message=FALSE}
+library(quantmod)
+getSymbols(c('SPY','QQQ'), src='google')
+```
+My setup on SPY
+```{r}
+chartSeries(SPY, theme="white",
+TA="addVo();addBBands();addCCI()", subset='2015')
+```
+My setup on QQQ...
+```{r}
+chartSeries(QQQ, theme="white",
+TA="addVo();addBBands();addCCI()", subset='2015')
